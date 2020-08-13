@@ -1,0 +1,15 @@
+version: "3.7"
+services:
+  mail:
+    build:
+      context: .
+      dockerfile: ./config/docker/Dockerfile
+    container_name: mail
+    image: mail
+    env_file:
+      - .env
+    ports:
+      - "9000:80"
+    restart: on-failure
+    volumes:
+      - .:/mail

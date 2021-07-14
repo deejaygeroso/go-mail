@@ -5,6 +5,6 @@
 - Removed unnecessary comments.
 - Fixed variable's spellings.
 
-### v0.4.0
+### v0.4.0 (August 2020)
 
 - First working version of go mail app.

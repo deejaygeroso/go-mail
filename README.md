@@ -83,13 +83,3 @@ Entry point of the application.
     Subject: string
   }
   ```
-
-## Troubleshooting
-
-##### Viewing logs on AWS Cloudwatch
-
-1. Login to AWS
-2. Go to `CloudWatch`
-3. Select `Log Groups` on the side navigation.
-4. Select `/ecs/mail` listed on the table.
-5. Select the lates log stream.

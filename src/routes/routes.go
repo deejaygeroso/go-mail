@@ -29,13 +29,13 @@ func SendMail(w http.ResponseWriter, r *http.Request, email string, password str
 	fmt.Println(receiver)
 	fmt.Println(sender)
 
-	recepients := []string{receiver.Email}
+	recipients := []string{receiver.Email}
 	subject := receiver.Subject
 	message := receiver.Message
 
-	bodyMessage := sender.WriteHTMLEmail(recepients, subject, message)
+	bodyMessage := sender.WriteHTMLEmail(recipients, subject, message)
 
-	sender.SendMail(recepients, subject, bodyMessage)
+	sender.SendMail(recipients, subject, bodyMessage)
 	json.NewEncoder(w).Encode(receiver)
 }
 

@@ -4,8 +4,8 @@ A standalone server which its purpose is to only send email.
 
 ## Required Environment Variables
 
-`Note:` Before running the application, environment variables must be defined.
-`Instruction:` Create a file `.env` inside your project directory, then add the variables with its corresponding values indicated in the table below.
+`Note:` Before running the application, environment variables must be defined.  
+`Instruction:` Create a file `.env` inside your project directory, then add the variables with its corresponding values indicated in the table below.  
 
 | Variables      |                     Definition                      |          Stage Values |           Prod Values |
 | :------------- | :-------------------------------------------------: | --------------------: | --------------------: |

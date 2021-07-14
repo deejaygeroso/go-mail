@@ -44,13 +44,13 @@ func (sender Sender) WriteEmail(dest []string, contentType, subject, bodyMessage
 	header := make(map[string]string)
 	header["From"] = sender.User
 
-	receipient := ""
+	recipient := ""
 
 	for _, user := range dest {
-		receipient = receipient + user
+		recipient = recipient + user
 	}
 
-	header["To"] = receipient
+	header["To"] = recipient
 	header["Subject"] = subject
 	header["MIME-Version"] = "1.0"
 	header["Content-Type"] = fmt.Sprintf("%s; charset=\"utf-8\"", contentType)

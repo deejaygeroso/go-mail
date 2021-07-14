@@ -11,14 +11,12 @@ import (
 	"github.com/gorilla/mux"
 )
 
-// Receiver unexported
 type Receiver struct {
 	Message string `json:"Message"`
 	Email   string `json:"Email"`
 	Subject string `json:"Subject"`
 }
 
-// SendMail unexported
 func SendMail(w http.ResponseWriter, r *http.Request, email string, password string) {
 	sender := gmail.Init(email, password)
 
@@ -39,12 +37,10 @@ func SendMail(w http.ResponseWriter, r *http.Request, email string, password str
 	json.NewEncoder(w).Encode(receiver)
 }
 
-// HomePage unexported
 func HomePage(w http.ResponseWriter, r *http.Request, appVersion string) {
 	fmt.Fprintf(w, "Go Mail Server "+appVersion)
 }
 
-// InitRoutes exported
 func InitRoutes(port string, email string, password string, appVersion string) {
 	router := mux.NewRouter().StrictSlash(true)
 

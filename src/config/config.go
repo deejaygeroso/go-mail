@@ -7,7 +7,6 @@ import (
 	"github.com/joho/godotenv"
 )
 
-// GetVariable unexported
 func GetVariable(key string) string {
 
 	// load .env file
@@ -20,14 +19,12 @@ func GetVariable(key string) string {
 	return os.Getenv(key)
 }
 
-// Config unexported
 type Config struct {
 	Email    string
 	Password string
 	Port     string
 }
 
-// Init exported
 func Init() Config {
 	Email := GetVariable("EMAIL")
 	Password := GetVariable("EMAIL_PASSWORD")

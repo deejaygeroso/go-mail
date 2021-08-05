@@ -6,6 +6,7 @@ A standalone server which its purpose is to only send email.
 
 `Note:` Before running the application, environment variables must be defined.  
 `Instruction:` Create a file `.env` inside your project directory, then add the variables with its corresponding values indicated in the table below.  
+`Important Gmail Account Config:` You will need to turn on `Allow less secure apps` on your gmail account.  
 
 | Variables      |                     Definition                      |          Stage Values |           Prod Values |
 | :------------- | :-------------------------------------------------: | --------------------: | --------------------: |
@@ -66,7 +67,7 @@ Entry point of the application.
 
 ##### API: Send email
 
-- `https://yourdomain.com/api/mail/send`
+- `https://yourdomain.com/api/send/mail`
   ```
   body: {
       email: string

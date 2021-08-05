@@ -73,10 +73,10 @@ func (sender Sender) WriteEmail(dest []string, contentType, subject, bodyMessage
 	return message
 }
 
-func (sender *Sender) WriteHTMLEmail(dest []string, subject, bodyMessage string) string {
+func (sender Sender) WriteHTMLEmail(dest []string, subject, bodyMessage string) string {
 	return sender.WriteEmail(dest, "text/html", subject, bodyMessage)
 }
 
-func (sender *Sender) WritePlainEmail(dest []string, subject, bodyMessage string) string {
+func (sender Sender) WritePlainEmail(dest []string, subject, bodyMessage string) string {
 	return sender.WriteEmail(dest, "text/plain", subject, bodyMessage)
 }

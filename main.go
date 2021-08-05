@@ -10,6 +10,6 @@ func main() {
 	appVersion := "v0.5.0"
 	fmt.Println("Go Mail Server " + appVersion)
 
-	config := config.Init()
-	routes.InitRoutes(config.Port, config.Email, config.Password, appVersion)
+	appConfig := config.Init()
+	routes.InitRoutes(appConfig.Port, appConfig.Email, appConfig.Password, appVersion)
 }

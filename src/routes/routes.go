@@ -24,8 +24,9 @@ func SendMail(w http.ResponseWriter, r *http.Request, email string, password str
 	var receiver Receiver
 	json.Unmarshal(reqBody, &receiver)
 
-	fmt.Println(receiver)
-	fmt.Println(sender)
+	fmt.Println("Sending email...")
+	fmt.Println("To: " + receiver.Email)
+	fmt.Println("From: " + sender.User)
 
 	recipients := []string{receiver.Email}
 	subject := receiver.Subject
@@ -38,10 +39,10 @@ func SendMail(w http.ResponseWriter, r *http.Request, email string, password str
 }
 
 func HomePage(w http.ResponseWriter, r *http.Request, appVersion string) {
-	fmt.Fprintf(w, "Go Mail Server "+appVersion)
+	fmt.Fprintf(w, "Go Mail Server " + appVersion)
 }
 
-func InitRoutes(port string, email string, password string, appVersion string) {
+func InitRoutes(port, email, password, appVersion string) {
 	router := mux.NewRouter().StrictSlash(true)
 
 	router.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {

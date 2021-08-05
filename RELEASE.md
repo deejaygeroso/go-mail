@@ -3,6 +3,7 @@
 - Added important note for the need to allow secure apps to be turned on to the gmail account used by the application.  
 - Added some few logs to console when sending mail.  
 - Removed the log that shows the sender's gmail password.  
+- Updated the api route mistyped under readme.  
 
 ### v0.5.0 (July 2021)
 

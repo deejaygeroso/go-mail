@@ -7,7 +7,7 @@ import (
 )
 
 func main() {
-	appVersion := "v0.5.0"
+	appVersion := "v0.5.1"
 	fmt.Println("Go Mail Server " + appVersion)
 
 	appConfig := config.Init()
